@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% for user in users %}
+    <ul>
+        <li>Логін: <a href="{{ user.get_absolute_url }}">{{ user.username }}</a></li>
+    </ul>
+    {% endfor %}
+    <!-- <div class="card">
+        <img img class="img-index" src="{% static 'project/images/index_photo_shoes.jpg' %}" alt="">
+        <div class="container">
+            <div class="card-text-title">Man's Shoes</div>
+            <div class="card-text-description">Style and fashion</div>
+        </div>
+    </div> -->
+{% endblock %}
+
+
